@@ -1,0 +1,130 @@
+#define RSCL32(a,b,c,d)   0x ## c ## d, 0x ## a ## b
+#define LC(a,b,c,d)       #d, #c, #b, #a
+#define RSCS32(a)         a, 0
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16990,
+	"An integer is required between ^1 and ^2."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16991,
+	"A decimal number is required between ^1 and ^2."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16992,
+	"This plug-in requires Adobe Photoshop?^1 or later functionality."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16993,
+	"This plug-in is incompatible with this version of the host program."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16994,
+	"the required suite \'^0\' is unavailable"
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16000,
+	"NearestBase\n\nVersion CC 2015 Release 1 (05/06/2015)\nCopyright 1996-2015, Adobe Systems Incorporated.\nAll Rights Reserved.\n\nAn example plug-in color picker module for Adobe Photoshop?"
+END
+
+16000  PiPL  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0L, /* kCurrentPiPL Version */
+	    8L, /* Property count */
+	"MIB8", /* '8BIM' */
+	"dnik", /* 'kind' PIKindProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	"MCB8", /* '8BCM' Photoshop Color Picker plug-in */
+
+	"MIB8", /* '8BIM' */
+	"eman", /* 'name' PINameProperty */
+	0L, /* Index */
+	   16L, /* Length */
+	"\013NearestBase\0\0\0\0", 
+
+	"MIB8", /* '8BIM' */
+	"gtac", /* 'catg' PICategoryProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"\010AdobeSDK\0\0\0", 
+
+	"MIB8", /* '8BIM' */
+	"srev", /* 'vers' PIVersionProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	0X00010000L, /* (Major << 16) | Minor */
+
+	"MIB8", /* '8BIM' */
+	"4668", /* '8664' PIWin64X86CodeProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"PluginMain\0\0", 
+
+	"MIB8", /* '8BIM' */
+	"emnp", /* 'pnme' PickerID */
+	0L, /* Index */
+	   24L, /* Length */
+	"\024AdobeSDK NearestBase\0\0\0", /* Picker name */
+
+	"MIB8", /* '8BIM' */
+	"edom", /* 'mode' SupportedModes */
+	0L, /* Index */
+	    4L, /* Length */
+	0XC0FF, /* Supported modes */
+	0, /* Reserved */
+
+	"MIB8", /* '8BIM' */
+	"lbne", /* 'enbl' EnableInfoProperty */
+	0L, /* Index */
+	    8L, /* Length */
+	"true\0\0\0\0", 
+
+END
+
+16000  aete  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0X0001, /* majorVersion|minorVersion */
+	0, /* language */
+	0, /* script */
+	    1, /* Suite Count */
+	"\010AdobeSDK", 
+	"\026Adobe example plug-ins", 
+	"9Kds", /* Suite ID */
+	1, /* Suite level */
+	1, /* Suite version */
+	    1, /* Event Count */
+	"\024AdobeSDK NearestBase", 
+	"\050nearestbase example color picker plug-in", 
+	"9Kds", /* Event class */
+	"Rkcp", /* Descriptor type */
+	"llun", /* Reply type */
+	"\000", 
+	000000, /* Flags */
+	"RmI#", /* Direct param type */
+	"\000", 
+	0XB000, /* Direct params */
+	    1, /* Parameter Count */
+	"\006amount", 
+	"tnmA", 
+	"buod", 
+	"\017dissolve amount", 
+	000000, /* Param flags */
+	    0, /* Class count */
+	0, /* Number of comparison ops (always 0) */
+	    0, /* Enum count */
+END
+
