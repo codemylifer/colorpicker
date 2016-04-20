@@ -31,9 +31,9 @@ if(TARGET ${PROJECT_NAME})
 	set(MY_RR_FILE "${R_FILE_DIR}/${R_FILE_NAME}.rr")
 	set(MY_PiPL_FILE "${R_FILE_DIR}/${R_FILE_NAME}.pipl")
 	
-	message("dir: ${FILE_NAME}")
+	message("dir: ${R_FILE_NAME}")
 	string(APPEND args "/EP /DMSWindows=1 /Tc\"${MY_R_FILE}\" > \"${MY_RR_FILE}\"")
-	#message("args = ${args}")
+	message("args = ${args}")
 
 	add_custom_target(${PROJECT_NAME}PreCompilePiPL ALL
 		COMMAND cl ${args}

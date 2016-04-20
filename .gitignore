@@ -16,6 +16,8 @@ PortableCMake-Win32/
 *.obj
 *.pch
 *.pdb
+*.pipl
+*.rr
 
 # Visual C++ cache files
 ipch/
